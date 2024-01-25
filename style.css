@@ -122,14 +122,11 @@ html {
   }
 }
 
-
-
 #reclame-aqui {
   width: 40%;
   margin-top: -650px;
   margin-left: 50%;
 }
-
 
 #foto-emprestimo {
   margin-top: 5%;
@@ -146,13 +143,15 @@ html {
   list-style-type: none;
 }
 
-.passos-header  h1 {
-    font-size: 29px;
-    text-align: left;
-    margin-top: 10%;
-    margin-left: 20%;
-    strong {
-      color: #0086ff;
+.passos-header h1 {
+  float: left;
+  direction: ltr;
+  font-size: 29px;
+  text-align: left;
+  margin-top: 10%;
+  margin-left: 15%;
+  strong {
+    color: #0086ff;
   }
 }
 
@@ -161,29 +160,27 @@ html {
     font-size: 1rem;
     margin-left: 5%;
   }
-} 
+}
 
-.selo {
-  margin-top: -80px;
-  float: right;
-  display: block;
-  margin-bottom: 50px;
-  max-width: 45%;
-  height: auto;
+#selo {
+  float: none;
+  margin-left: 70%;
+  margin-top: -10%;
 }
 
 @media screen and (max-width: 310px) {
-  .selo {
+  #selo {
     width: 30%;
+    margin-top: -25git %;
   }
 }
 
 #tres-passos {
   margin-top: 25%;
- }
- #tres-passos .row .col-sm-4 img {
-   border-radius: 20px;
- }
+}
+#tres-passos .row .col-sm-4 img {
+  border-radius: 20px;
+}
 
 @media screen and (max-width: 310px) {
   #tres-passos .row .col-sm-4 {
