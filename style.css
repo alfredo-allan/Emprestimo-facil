@@ -228,10 +228,10 @@ html {
   li {
     margin-left: -85%;
     margin-top: 2.5%;
-  } p {
+  }
+  p {
     margin-top: 10%;
     font-family: "ubuntu+mono";
-
   }
 }
 
@@ -253,8 +253,7 @@ html {
   margin-top: -2%;
   float: left;
   width: 45px;
-  margin-right: 0px
-
+  margin-right: 0px;
 }
 
 @media only screen and (min-width: 1360px) and (max-width: 3840px) {
@@ -276,5 +275,5 @@ html {
 }
 
 .carousel-inner .carousel-item .d-block w-100 img {
-  width:10%
+  width: 10%;
 }
