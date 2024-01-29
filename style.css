@@ -52,7 +52,7 @@
   clear: both;
 }
 
-@media only screen and (max-width: 350px) and (max-height: 600px) {
+@media only screen and (min-width: 310px) and (max-width: 450px) {
   #foto-idoso {
     display: none;
   }
@@ -111,7 +111,7 @@ html {
     font-size: 32px;
     color: #012f6d;
     strong {
-      color: #063d91;
+      color: #0086ff;
     }
   }
 }
@@ -146,25 +146,24 @@ html {
 .passos-header h1 {
   float: left;
   direction: ltr;
-  font-size: 29px;
+  font-size: 45px;
   text-align: left;
   margin-top: 10%;
-  margin-left: 15%;
+  margin-left: 10%;
   strong {
     color: #0086ff;
   }
 }
-
-.passos-header img {
-  width: 25%;
-  margin-top: 0px;
-  float: right;
+@media screen and (min-width: 310px) and (max-width: 450px) {
+  #tres-passos .row .col-sm-4 img {
+    width: 300px;
+  }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (min-width: 310px) and (max-width: 450px) {
   .passos-header h1 {
-    font-size: 1rem;
-    margin-left: 1.5%;
+    font-size: 1.5rem;
+    margin-left: 10%;
   }
 }
 
@@ -175,9 +174,107 @@ html {
   border-radius: 20px;
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (min-width: 310px) and (max-width: 370px) {
   #tres-passos .row .col-sm-4 {
-    margin-left: -5%;
+    margin-left: 0%;
     max-width: 100%;
   }
+}
+#secao-idosa {
+  width: 100%;
+  margin-top: 10%;
+  background-color: #f2f2f2;
+  position: relative;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif !important;
+  display: flex;
+  flex-direction: row;
+}
+
+@media only screen and (min-width: 310px) and (max-width: 450px) {
+  #secao-idosa #coluna-idosa .row #img-senhora {
+    width: 200px;
+  }
+}
+
+@media only screen and (min-width: 1360px) and (max-width: 3840px) {
+  #secao-idosa #coluna-idosa .row #img-senhora {
+    width: 300px;
+  }
+}
+
+#secao-idosa #coluna-idosa .row h2 {
+  margin-top: 20%;
+  margin-left: -70%;
+  font-family: "ubuntu";
+  text-align: left;
+  font-size: 2rem;
+  color: #012f6d;
+  strong {
+    color: #0086ff;
+  }
+}
+
+#secao-idosa #coluna-idosa .row #img-senhora {
+  margin-left: 50px;
+}
+
+#secao-idosa #coluna-idosa .row ul {
+  font-family: "ubuntu+mono";
+  color: #444444;
+  font-size: 18px;
+  margin-top: 5%;
+  list-style-type: none;
+  li {
+    margin-left: -85%;
+    margin-top: 2.5%;
+  } p {
+    margin-top: 10%;
+    font-family: "ubuntu+mono";
+
+  }
+}
+
+@media only screen and (min-width: 310px) and (max-width: 450px) {
+  #secao-idosa #coluna-idosa .row p {
+    margin-left: 45%;
+    font-size: 15px;
+  }
+}
+
+@media only screen and (min-width: 310px) and (max-width: 450px) {
+  #secao-idosa #coluna-idosa .row img {
+    margin-left: 30%;
+    text-align: left;
+  }
+}
+
+#secao-idosa #coluna-idosa .row img {
+  margin-top: -2%;
+  float: left;
+  width: 45px;
+  margin-right: 0px
+
+}
+
+@media only screen and (min-width: 1360px) and (max-width: 3840px) {
+  #secao-idosa #coluna-idosa .row img {
+    margin-left: -50px;
+  }
+}
+
+@media only screen and (min-width: 310px) and (max-width: 450px) {
+  #secao-idosa #coluna-idosa .row h2 {
+    margin-left: 5%;
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (min-width: 310px) and (max-width: 450px) {
+  #secao-idosa #coluna-idosa .row ul {
+    margin-left: 10%;
+  }
+}
+
+.carousel-inner .carousel-item .d-block w-100 img {
+  width:10%
 }
