@@ -22,6 +22,7 @@
   width: 100%;
   font-family: "ubuntu";
   margin-top: -4%;
+  padding: 30px 0 0 10px;
   h1 {
     font-size: 35px;
     text-align: left;
@@ -39,6 +40,13 @@
   }
   li {
     margin-top: 2.5%;
+  }
+}
+
+@media (min-width: 310px) and (max-width: 480px) {
+  #check-blue p {
+    margin-top: 10%;
+    margin-left: 13%;
   }
 }
 
@@ -60,7 +68,7 @@
   margin-top: 3.5%;
   width: 100vw;
   height: auto;
-  background-image: url('./assets/image/background-img.png');
+  background-image: url("./assets/image/background-img.png");
 }
 #box-idoso {
   background-color: #063d91;
@@ -121,10 +129,20 @@ html {
   }
 }
 
-#reclame-aqui-img {
-  width: 40%;
-  margin-top: -650px;
-  margin-left: 50%;
+@media (min-width: 1360px) and (max-width: 3840px) {
+  #reclame-aqui-img {
+    width: 30%;
+    margin-top: -580px;
+    margin-left: 40%;
+  }
+}
+
+@media (min-width: 310px) and (max-width: 480px) {
+  #reclame-aqui-img {
+    width: 135px;
+    margin-top: -550px;
+    margin-left: 58%;
+  }
 }
 
 #foto-emprestimo {
@@ -140,6 +158,16 @@ html {
   text-align: left;
   margin-top: 10%;
   list-style-type: none;
+}
+
+#lista-reclame-aqui p {
+  margin-left: 8%;
+}
+
+@media (min-width: 310px) and (max-width: 480px) {
+  #lista-reclame-aqui p {
+    margin-left: 13%;
+  }
 }
 
 .passos-header h1 {
@@ -226,6 +254,7 @@ html {
   font-size: 18px;
   margin-top: 5%;
   list-style-type: none;
+  margin-bottom: 10%;
   li {
     margin-left: -85%;
     margin-top: 2.5%;
@@ -245,6 +274,7 @@ html {
 
 @media only screen and (min-width: 310px) and (max-width: 450px) {
   #secao-idosa #coluna-idosa .row img {
+    width: 50px;
     margin-left: 30%;
     text-align: left;
   }
@@ -272,6 +302,7 @@ html {
 }
 @media only screen and (min-width: 310px) and (max-width: 450px) {
   #secao-idosa #coluna-idosa .row ul {
+    margin-bottom: 15%;
     margin-left: 10%;
   }
 }
@@ -318,4 +349,31 @@ html {
     color: #0086ff;
     font-size: 35px;
   }
+}
+
+footer {
+  background-image: url("./assets/image/background-img.png");
+  display: flex;
+}
+
+.footer-content-wrapper h1 {
+    margin: 0px 0px 30.4px;
+    margin-left: 30px;
+    margin-top: 20px;
+    color: #f6ac00 !important;
+    font-size: 1.75rem !important;
+}
+.footer-content-wrapper #contato-container #whatsapp-icon {
+  margin-left: 10%;
+}
+
+.footer-content-wrapper #contato-container h2 {
+  margin-left: 0%;
+  margin-top: 5%;
+      color: #f6ac00 !important;
+
+}
+
+.footer-content-wrapper #contato-container a {
+  margin-left: 10%;
 }
