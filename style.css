@@ -354,26 +354,133 @@ html {
 footer {
   background-image: url("./assets/image/background-img.png");
   display: flex;
+  margin-top: 10%;
 }
 
 .footer-content-wrapper h1 {
-    margin: 0px 0px 30.4px;
-    margin-left: 30px;
-    margin-top: 20px;
-    color: #f6ac00 !important;
-    font-size: 1.75rem !important;
+  font-family: "ubuntu";
+  margin: 0px 0px 30.4px;
+  margin-left: 3%;
+  margin-top: 20px;
+  color: #f6ac00 !important;
+  font-size: 1.75rem !important;
 }
 .footer-content-wrapper #contato-container #whatsapp-icon {
   margin-left: 10%;
 }
 
 .footer-content-wrapper #contato-container h2 {
-  margin-left: 0%;
+  font-family: "ubuntu";
+  margin-left: 9%;
   margin-top: 5%;
-      color: #f6ac00 !important;
-
+  color: #f6ac00 !important;
+  line-height: 2.42rem;
+  font-size: 1.25rem;
 }
 
-.footer-content-wrapper #contato-container a {
-  margin-left: 10%;
+.footer-content-wrapper #contato-container .link-whats {
+  font-family: "ubuntu+mono";
+  color: #ffff;
+  font-size: 12px;
+  margin-left: 9%;
+}
+
+#atendimento-ouvidoria h2 {
+  font-family: "ubuntu";
+  margin-right: 9%;
+  margin-top: 5%;
+  color: #f6ac00 !important;
+  line-height: 2.42rem;
+  font-size: 1.25rem;
+}
+
+#atendimento-ouvidoria p {
+  font-family: "ubuntu+mono";
+  color: #ffff;
+  font-size: 1.1rem;
+  margin-right: 9%;
+}
+
+#canal-denuncia h2 {
+  font-family: "ubuntu";
+  margin-left: 4%;
+  margin-top: 5%;
+  color: #f6ac00 !important;
+  line-height: 2.42rem;
+  font-size: 1.25rem;
+  white-space: nowrap;
+}
+
+#canal-denuncia p {
+  font-family: "ubuntu+mono";
+  margin-left: 4%;
+  color: #ffff;
+  font-size: 1.1rem;
+}
+#canal-denuncia img {
+  margin-left: 4%;
+}
+@media only screen and (min-width: 310px) and (max-width: 450px) {
+  #canal-denuncia {
+    padding-left: 10px;
+  }
+}
+#endereco h2 {
+  font-family: "ubuntu";
+  margin-left: 4%;
+  margin-top: 5%;
+  color: #f6ac00 !important;
+  line-height: 2.42rem;
+  font-size: 1.25rem;
+  white-space: nowrap;
+}
+
+#endereco p {
+  font-family: "ubuntu+mono";
+  margin-left: 5%;
+  color: #ffff;
+  font-size: 1.1rem;
+}
+
+#endereco img {
+  margin-top: 4%;
+  margin-left: 4%;
+}
+
+.politica-privacidade a {
+  font-family: "ubuntu";
+  margin-left: 4%;
+  color: #f6ac00 !important;
+  line-height: 2.42rem;
+  font-size: 1.25rem;
+}
+@media only screen and (min-width: 310px) and (max-width: 450px) {
+  .politica-privacidade a {
+    font-size: 1.25rem;
+    display: inline-block;
+  }
+}
+
+.politica-privacidade .copyright {
+  font-family: "ubuntu+mono";
+  padding-top: 3rem;
+  margin-left: 4%;
+  color: #ffff;
+  font-size: 1.1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+#whatsapp-button img {
+  width: 50px;
+  height: 50px;
 }
