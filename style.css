@@ -422,7 +422,8 @@ footer {
 }
 @media only screen and (min-width: 310px) and (max-width: 450px) {
   #canal-denuncia {
-    padding: 0px 100px 0px 50px;
+    padding: 0px 80px 0px 50px;
+    margin-left: -7%;
   }
 }
 #endereco h2 {
