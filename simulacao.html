@@ -24,19 +24,17 @@
           <div class="section-subtitle">Simulador de Empréstimo CONSIGNADO</div>
           <h1>De quanto você precisa?</h1>
           <div>
-            <input
-              id="ValorSolicitado"
-              class="input-simulation mascaraValor"
-              maxlength="13"
-              placeholder="0,00"
-              type="text"
-              onfocus="$(this).maskMoney({
-              decimal: ',',
-              thousands: '.',
-              allowZero: true,
-              prefix: 'R$ '
-            });"
-            />
+            <div class="input-wrapper">
+              <span class="input-currency">R$</span>
+              <input
+                id="ValorSolicitado"
+                class="input-simulation mascaraValor"
+                maxlength="13"
+                placeholder="0,00"
+                type="text"
+                oninput="formatarValor(this)"
+              />
+            </div>
           </div>
           <span class="input-subtitle"
             >Digite um valor entre R$500,00 e R$50.000,00</span
@@ -101,13 +99,16 @@
           </div>
         </div>
         <div class="col">
-          <img id="img-mulher-consignado" src="./assets/image/img-mulher-consignado.jpg" alt="" />
+          <img
+            id="img-mulher-consignado"
+            src="./assets/image/img-mulher-consignado.jpg"
+            alt=""
+          />
         </div>
         <div class="col"></div>
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"></script>
     <script src="./js/simulacao.js"></script>
   </body>
 </html>

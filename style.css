@@ -594,3 +594,17 @@ footer {
     display: none;
   }
 }
+
+.input-wrapper {
+  text-align: right;
+  display: flex;
+  align-items: center;
+}
+
+.input-currency {
+  vertical-align: middle;
+  color: #0086ff;
+  font-family: "ubuntu";
+  font-size: 28px;
+  margin-right: 5px;
+}

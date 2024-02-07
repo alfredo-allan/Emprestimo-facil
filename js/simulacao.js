@@ -27,3 +27,17 @@ $(document).ready(function () {
     }
   });
 });
+
+function formatarValor(input) {
+  // Remove tudo que não é dígito
+  var valor = input.value.replace(/\D/g, "");
+
+  // Adiciona a vírgula como separador de decimal
+  valor = valor.replace(/(\d{2})$/, ",$1");
+
+  // Adiciona o ponto como separador de milhar
+  valor = valor.replace(/(\d+)(\d{3},\d{2})$/, "$1.$2");
+
+  // Atualiza o valor no campo
+  input.value = valor;
+}
