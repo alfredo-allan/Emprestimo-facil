@@ -41,3 +41,13 @@ function formatarValor(input) {
   // Atualiza o valor no campo
   input.value = valor;
 }
+
+window.onscroll = function () {
+  var button = document.getElementById("whatsapp-button");
+
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    button.style.opacity = "1";
+  } else {
+    button.style.opacity = "0";
+  }
+};
