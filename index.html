@@ -1,401 +1,390 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css"
-      integrity="sha384-nU14brUcp6StFntEOOEBvcJm4huWjB0OcIeQ3fltAfSmuZFrkAif0T+UtNGlKKQv"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./style.css" />
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&family=Ubuntu:wght@700&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css"
+    integrity="sha384-nU14brUcp6StFntEOOEBvcJm4huWjB0OcIeQ3fltAfSmuZFrkAif0T+UtNGlKKQv" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./style.css" />
 
-    <title>Empréstimo fácil</title>
-  </head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet">
 
-  <body>
-    <div class="btn-group-sm">
-      <button type="button" id="botao" class="btn btn-primary">
-        Faça uma Simulação
-      </button>
+  <title>Empréstimo fácil</title>
+</head>
+
+<body>
+  <div class="btn-group-sm">
+    <button type="button" id="botao" class="btn btn-primary">
+      Faça uma Simulação
+    </button>
+    <button type="button" class="login-or-register" id="abrirModalCadastro">
+      <img class="ico-login" src="./assets/image/profile-user.png" alt="ico login">
+      <span class="login-or-register-text"> Cadastre-se ou (Faça Login)</span>
+    </button>
+
+    <div class="modal fade" id="modalCadastro" tabindex="-1" role="dialog" aria-labelledby="modalCadastroLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalCadastroLabel">Cadastro de Usuário</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="formCadastro">
+              <div class="form-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" class="form-control" id="nome" placeholder="Digite seu nome completo"
+                  oninput="this.value = this.value.replace(/(?:^|\s)\S/g, c => c.toUpperCase())">
+              </div>
+              <div class="form-group">
+                <label for="telefone">Telefone</label>
+                <input type="text" class="form-control" id="telefone" placeholder="Digite seu telefone">
+              </div>
+              <div class="form-group">
+                <label for="cpf">CPF</label>
+                <input type="text" class="form-control" id="cpf" placeholder="Digite seu CPF">
+              </div>
+              <div class="form-group">
+                <label for="cep">CEP</label>
+                <input type="text" class="form-control" id="cep" placeholder="Digite seu CEP"
+                  onblur="buscarEndereco(this.value)">
+              </div>
+              <div class="form-group">
+                <label for="rua">Rua</label>
+                <input type="text" class="form-control" id="rua" placeholder="Rua" readonly>
+                </d iv>
+                <div class="form-group">
+                  <label for="bairro">Bairro</label>
+                  <input type="text" class="form-control" id="bairro" placeholder="Bairro" readonly>
+                </div>
+                <div class="form-group">
+                  <label for="numero">Número</label>
+                  <input type="text" class="form-control" id="numero" placeholder="Número">
+                </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn-register-close" data-dismiss="modal">Fechar</button>
+            <button type="button" class="btn-register" onclick="enviarCadastro()">Salvar</button>
+          </div>
+        </div>
+      </div>
     </div>
-    <div id="whatsapp-button">
-      <a
-        href="https://api.whatsapp.com/send?phone=5511913311054"
-        target="_blank"
-      >
-        <img src="./assets/image/whatsapp.png" alt="WhatsApp" />
-      </a>
-    </div>
-    <div class="box">
-      <div id="check-blue" class="container-sm">
-        <h1>
-          Facilite a sua vida e alcance <br />
-          seus​ objetivos com o<br />
-          <strong style="color: #8dbdff">Empréstimo Facilitado!</strong>
-        </h1>
-        <ul>
+
+
+</body>
+
+</html>
+
+Arquivo script.js (apenas a lógica):
+JavaScript
+
+</div>
+<div id="whatsapp-button">
+  <a href="https://api.whatsapp.com/send?phone=5511913311054" target="_blank">
+    <img src="./assets/image/whatsapp.png" alt="WhatsApp" />
+  </a>
+</div>
+<div class="box">
+  <div id="check-blue" class="container-sm">
+    <h1>
+      Facilite a sua vida e alcance <br />
+      seus​ objetivos com o<br />
+      <strong style="color: #8dbdff">Empréstimo Facilitado!</strong>
+    </h1>
+    <ul>
+      <li>
+        <img src="./assets/image/check-blue.png" alt="descrição_da_imagem" style="float: left; margin-right: 10px" />
+        <p>Taxas super reduzidas​<br /></p>
+      </li>
+      <li>
+        <img src="./assets/image/check-blue.png" alt="descrição_da_imagem" style="float: left; margin-right: 10px" />
+        <p>Desconto direto na folha de pagamento​​<br /></p>
+      </li>
+      <li>
+        <img src="./assets/image/check-blue.png" alt="descrição_da_imagem" style="float: left; margin-right: 10px" />
+        <p>Até 84 meses para pagar​<br /></p>
+      </li>
+      <li>
+        <img class="img-fluid" src="./assets/image/check-blue.png" alt="descrição_da_imagem"
+          style="float: left; margin-right: 10px" />
+        <p>Contratação 100% online​<br /></p>
+      </li>
+    </ul>
+  </div>
+  <div class="box" id="box-idoso">
+    <img class="img-fluid" src="./assets/image/consignado-idosos.png" id="foto-idoso" alt="" />
+  </div>
+</div>
+<div class="card">
+  <div class="card-body">
+    <p>
+      Minha experiência com o empréstimo fácil foi a mais positiva possível.
+      Tudo pela internet, o crédito foi rápido.<br />
+    </p>
+    <span>Katia Luiza</span>
+  </div>
+</div>
+<section id="emprestimo">
+  <div class="container text-center">
+    <div id="row-reclame-aqui" class="row">
+      <div id="foto-emprestimo" class="col">
+        <img src="./assets/image/foto-emprestimo.png" alt="" />
+        <img id="reclame-aqui-img" src="./assets/image/reclame-aqui.png" alt="" />
+      </div>
+      <div class="col-sm-6">
+        <h2>
+          Por que você deve escolher o Empréstimo Consignado INSS da
+          <strong>Empréstimo fácil?</strong>
+        </h2>
+        <ul id="lista-reclame-aqui">
           <li>
-            <img
-              src="./assets/image/check-blue.png"
-              alt="descrição_da_imagem"
-              style="float: left; margin-right: 10px"
-            />
-            <p>Taxas super reduzidas​<br /></p>
+            <img src="./assets/image/check-green.png" alt="descrição_da_imagem"
+              style="float: left; margin-right: 10px" />
+            <p>
+              Mais de <strong>mil clientes satisfeitos e 5 anos</strong> de
+              tradição e reconhecimento​<br />
+            </p>
           </li>
           <li>
-            <img
-              src="./assets/image/check-blue.png"
-              alt="descrição_da_imagem"
-              style="float: left; margin-right: 10px"
-            />
-            <p>Desconto direto na folha de pagamento​​<br /></p>
+            <img src="./assets/image/check-green.png" alt="descrição_da_imagem"
+              style="float: left; margin-right: 10px" />
+            <p>
+              Pertencemos ao Grupo
+              <strong>Empréstimo Fácil, um grupo sólido</strong> em todo
+              país<br />
+            </p>
           </li>
           <li>
-            <img
-              src="./assets/image/check-blue.png"
-              alt="descrição_da_imagem"
-              style="float: left; margin-right: 10px"
-            />
-            <p>Até 84 meses para pagar​<br /></p>
+            <img src="./assets/image/check-green.png" alt="descrição_da_imagem"
+              style="float: left; margin-right: 10px" />
+            <p>
+              Criptogrofia em todas as transações para você ficar
+              <strong>protegido contra fraudes e golpes</strong>​<br />
+            </p>
           </li>
           <li>
-            <img
-              class="img-fluid"
-              src="./assets/image/check-blue.png"
-              alt="descrição_da_imagem"
-              style="float: left; margin-right: 10px"
-            />
+            <img class="img-fluid" src="./assets/image/check-green.png" alt="descrição_da_imagem"
+              style="float: left; margin-right: 10px" />
             <p>Contratação 100% online​<br /></p>
           </li>
         </ul>
       </div>
-      <div class="box" id="box-idoso">
-        <img
-          class="img-fluid"
-          src="./assets/image/consignado-idosos.png"
-          id="foto-idoso"
-          alt=""
-        />
+    </div>
+  </div>
+</section>
+<div class="passos-header">
+  <h1>
+    <strong>3 passos</strong> para contratar seu empréstimo consignado
+  </h1>
+</div>
+<div id="tres-passos" class="container-sm">
+  <div class="row">
+    <div class="col-sm-4">
+      <img src="./assets/image/passo1.png" alt="Imagem 1" class="img-responsive" />
+    </div>
+    <div class="col-sm-4">
+      <img src="./assets/image/passo2.png" alt="Imagem 2" class="img-responsive" />
+    </div>
+    <div class="col-sm-4">
+      <img src="./assets/image/passo3.png" alt="Imagem 3" class="img-responsive" />
+    </div>
+  </div>
+</div>
+<section id="secao-idosa">
+  <div id="coluna-idosa" class="container">
+    <div class="row align-items-center">
+      <div class="col">
+        <img id="img-senhora" src="./assets/image/img-senhora-facilidade-total.png" alt="" />
+      </div>
+      <div class="col"></div>
+      <div class="col">
+        <h2>
+          <strong>Facilidade total</strong> para você pagar o seu empréstimo
+          consignado:
+        </h2>
+        <ul>
+          <li>
+            <img src="./assets/image/boleto-icon.png" alt="" />
+            <p>
+              Desconto direto na folha de pagamento, sem boletos para pagar
+            </p>
+          </li>
+          <li>
+            <img src="./assets/image/emprestimo-icon.png" alt="" />
+            <p>
+              Empréstimos de até R$50.000,00 que podem ser parcelados em até
+              84x
+            </p>
+          </li>
+          <li>
+            <img src="./assets/image/bank-icon.png" alt="" />
+            <p>Taxas super reduzidas</p>
+          </li>
+        </ul>
       </div>
     </div>
-    <div class="card">
-      <div class="card-body">
-        <p>
-          Minha experiência com o empréstimo fácil foi a mais positiva possível.
-          Tudo pela internet, o crédito foi rápido.<br />
-        </p>
-        <span>Katia Luiza</span>
-      </div>
-    </div>
-    <section id="emprestimo">
-      <div class="container text-center">
-        <div id="row-reclame-aqui" class="row">
-          <div id="foto-emprestimo" class="col">
-            <img src="./assets/image/foto-emprestimo.png" alt="" />
-            <img
-              id="reclame-aqui-img"
-              src="./assets/image/reclame-aqui.png"
-              alt=""
-            />
+  </div>
+</section>
+<div id="titulo-slides">
+  <h2>Veja o que <strong>nossos clientes</strong> dizem:</h2>
+</div>
+<section id="slides">
+  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <!-- Slide 1 -->
+        <div class="row">
+          <div class="col-md-4">
+            <img src="./assets/image/comentario-1.png" alt="Imagem 1" />
           </div>
-          <div class="col-sm-6">
-            <h2>
-              Por que você deve escolher o Empréstimo Consignado INSS da
-              <strong>Empréstimo fácil?</strong>
-            </h2>
-            <ul id="lista-reclame-aqui">
-              <li>
-                <img
-                  src="./assets/image/check-green.png"
-                  alt="descrição_da_imagem"
-                  style="float: left; margin-right: 10px"
-                />
-                <p>
-                  Mais de <strong>mil clientes satisfeitos e 5 anos</strong> de
-                  tradição e reconhecimento​<br />
-                </p>
-              </li>
-              <li>
-                <img
-                  src="./assets/image/check-green.png"
-                  alt="descrição_da_imagem"
-                  style="float: left; margin-right: 10px"
-                />
-                <p>
-                  Pertencemos ao Grupo
-                  <strong>Empréstimo Fácil, um grupo sólido</strong> em todo
-                  país<br />
-                </p>
-              </li>
-              <li>
-                <img
-                  src="./assets/image/check-green.png"
-                  alt="descrição_da_imagem"
-                  style="float: left; margin-right: 10px"
-                />
-                <p>
-                  Criptogrofia em todas as transações para você ficar
-                  <strong>protegido contra fraudes e golpes</strong>​<br />
-                </p>
-              </li>
-              <li>
-                <img
-                  class="img-fluid"
-                  src="./assets/image/check-green.png"
-                  alt="descrição_da_imagem"
-                  style="float: left; margin-right: 10px"
-                />
-                <p>Contratação 100% online​<br /></p>
-              </li>
-            </ul>
+          <div class="col-md-4">
+            <img src="./assets/image/comentario-2.png" alt="Imagem 2" />
+          </div>
+          <div class="col-md-4">
+            <img src="./assets/image/comentario-3.png" alt="Imagem 3" />
           </div>
         </div>
       </div>
-    </section>
-    <div class="passos-header">
-      <h1>
-        <strong>3 passos</strong> para contratar seu empréstimo consignado
-      </h1>
+      <div class="carousel-item">
+        <!-- Slide 2 -->
+        <div class="row">
+          <div class="col-md-4">
+            <img src="./assets/image/comentario-4.png" alt="Imagem 4" />
+          </div>
+          <div class="col-md-4">
+            <img src="./assets/image/comentario-5.png" alt="Imagem 5" />
+          </div>
+          <div class="col-md-4">
+            <img src="./assets/image/comentario-6.png" alt="Imagem 6" />
+          </div>
+        </div>
+      </div>
     </div>
-    <div id="tres-passos" class="container-sm">
+    <!-- Navigation -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
+<footer>
+  <div class="footer-content-wrapper">
+    <h1>Entre em contato</h1>
+    <div class="container">
       <div class="row">
-        <div class="col-sm-4">
-          <img
-            src="./assets/image/passo1.png"
-            alt="Imagem 1"
-            class="img-responsive"
-          />
+        <div id="contato-container" class="col">
+          <img id="whatsapp-icon" src="./assets/image/whatsapp-icon.png" alt="" />
+          <h2>whatsapp</h2>
+          <div class="link-whats">
+            <a href="https://api.whatsapp.com/send?phone=5511913311054" style="text-decoration: underline">Clique aqui
+              para
+
+              <br />
+
+              entrar em contato<br />
+
+              +55 (11) 91331-1054
+            </a>
+          </div>
         </div>
-        <div class="col-sm-4">
-          <img
-            src="./assets/image/passo2.png"
-            alt="Imagem 2"
-            class="img-responsive"
-          />
+        <div class="col">
+          <div id="atendimento-ouvidoria" class="col">
+            <img src="./assets/image/phone-icon.png" alt="" />
+            <h2>Atendimento e Ouvidoria</h2>
+            <p>
+              0800 095 6701
+
+              <br />
+
+              2ª a 6ª feira: 8h às 19h <br />
+
+              sábados: 8h às 14h
+            </p>
+          </div>
         </div>
-        <div class="col-sm-4">
-          <img
-            src="./assets/image/passo3.png"
-            alt="Imagem 3"
-            class="img-responsive"
-          />
+        <div id="canal-denuncia" class="col">
+          <img src="./assets/image/denuncia-icon.png" alt="" />
+          <h2>Canal de Denúncia</h2>
+          <p>
+            0800 095 6701
+
+            <br />
+
+            2ª a 6ª feira: 8h às 19h • sábados: 8h às 14h <br />
+            <br />
+
+            O canal de denúncia tem como finalidade receber de funcionários,
+            colaboradores, clientes, usuários, parceiros ou fornecedores
+            comunicação de situações com indícios de ilicitude de qualquer
+            natureza, relacionadas às atividades da instituição. Para tais
+            comunicações não se faz necessário se identificar
+          </p>
+        </div>
+        <div id="endereco" class="col">
+          <img src="./assets/image/address-icon.png" alt="" />
+          <h2>Nosso endereço</h2>
+          <p>Avenida José de Ananias Aguiar, 5005 - Araxá/MG</p>
+        </div>
+        <div class="politica-privacidade">
+          <a href="">Política de privacidade e termos de uso </a>
+          <p class="copyright">
+            © Copyright
+
+            <script>
+              //<![CDATA[
+              document.write(new Date().getFullYear());
+
+              //]]>
+            </script>
+            Empréstimo fácil Financeira. Todos os direitos reservados. Fácil
+            CFI S.A., pessoa jurídica de direito privado estabelecida na Av.
+            José Ananias de Aguiar, nº 5005, Bairro Conjunto Habitacional,
+            Boa Vista Araxá /MG, CEP 38184-200, inscrita no CNPJ/MF sob o nº
+            05.351.887/0001-88. Prazo de pagamento: de 03 a 24 meses. As
+            taxas mensais podem variar de 5,65% a.m. até 11,80% a.m. CET
+            anual de 232,83% a.a. até 312,50% a.a. Exemplo: um empréstimo de
+            R$ 12.000,00 em 24 meses terá parcelas de R$ 965,05, um valor
+            total de R$ 23.161,20, juros de 5,65% a.m. (93,39% a.a.) e CET
+            de 6,02% a.m (103,72% a.a.). As taxas, prazos de pagamentos e os
+            valores exemplificativos poderão variar de acordo com os
+            critérios de aprovação de crédito da Empréstimo Fácil
+            Financeira.
+          </p>
         </div>
       </div>
     </div>
-    <section id="secao-idosa">
-      <div id="coluna-idosa" class="container">
-        <div class="row align-items-center">
-          <div class="col">
-            <img
-              id="img-senhora"
-              src="./assets/image/img-senhora-facilidade-total.png"
-              alt=""
-            />
-          </div>
-          <div class="col"></div>
-          <div class="col">
-            <h2>
-              <strong>Facilidade total</strong> para você pagar o seu empréstimo
-              consignado:
-            </h2>
-            <ul>
-              <li>
-                <img src="./assets/image/boleto-icon.png" alt="" />
-                <p>
-                  Desconto direto na folha de pagamento, sem boletos para pagar
-                </p>
-              </li>
-              <li>
-                <img src="./assets/image/emprestimo-icon.png" alt="" />
-                <p>
-                  Empréstimos de até R$50.000,00 que podem ser parcelados em até
-                  84x
-                </p>
-              </li>
-              <li>
-                <img src="./assets/image/bank-icon.png" alt="" />
-                <p>Taxas super reduzidas</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    <div id="titulo-slides">
-      <h2>Veja o que <strong>nossos clientes</strong> dizem:</h2>
-    </div>
-    <section id="slides">
-      <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <!-- Slide 1 -->
-            <div class="row">
-              <div class="col-md-4">
-                <img src="./assets/image/comentario-1.png" alt="Imagem 1" />
-              </div>
-              <div class="col-md-4">
-                <img src="./assets/image/comentario-2.png" alt="Imagem 2" />
-              </div>
-              <div class="col-md-4">
-                <img src="./assets/image/comentario-3.png" alt="Imagem 3" />
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <!-- Slide 2 -->
-            <div class="row">
-              <div class="col-md-4">
-                <img src="./assets/image/comentario-4.png" alt="Imagem 4" />
-              </div>
-              <div class="col-md-4">
-                <img src="./assets/image/comentario-5.png" alt="Imagem 5" />
-              </div>
-              <div class="col-md-4">
-                <img src="./assets/image/comentario-6.png" alt="Imagem 6" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Navigation -->
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExample"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExample"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </section>
-    <footer>
-      <div class="footer-content-wrapper">
-        <h1>Entre em contato</h1>
-        <div class="container">
-          <div class="row">
-            <div id="contato-container" class="col">
-              <img
-                id="whatsapp-icon"
-                src="./assets/image/whatsapp-icon.png"
-                alt=""
-              />
-              <h2>whatsapp</h2>
-              <div class="link-whats">
-                <a
-                  href="https://api.whatsapp.com/send?phone=5511913311054"
-                  style="text-decoration: underline"
-                  >Clique aqui para
+  </div>
+</footer>
+<!-- Optional JavaScript; choose one of the two! -->
 
-                  <br />
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="./js/main.js"></script>
+<script src="./js/registro.js"></script>
 
-                  entrar em contato<br />
-
-                  +55 (11) 91331-1054
-                </a>
-              </div>
-            </div>
-            <div class="col">
-              <div id="atendimento-ouvidoria" class="col">
-                <img src="./assets/image/phone-icon.png" alt="" />
-                <h2>Atendimento e Ouvidoria</h2>
-                <p>
-                  0800 095 6701
-
-                  <br />
-
-                  2ª a 6ª feira: 8h às 19h <br />
-
-                  sábados: 8h às 14h
-                </p>
-              </div>
-            </div>
-            <div id="canal-denuncia" class="col">
-              <img src="./assets/image/denuncia-icon.png" alt="" />
-              <h2>Canal de Denúncia</h2>
-              <p>
-                0800 095 6701
-
-                <br />
-
-                2ª a 6ª feira: 8h às 19h • sábados: 8h às 14h <br />
-                <br />
-
-                O canal de denúncia tem como finalidade receber de funcionários,
-                colaboradores, clientes, usuários, parceiros ou fornecedores
-                comunicação de situações com indícios de ilicitude de qualquer
-                natureza, relacionadas às atividades da instituição. Para tais
-                comunicações não se faz necessário se identificar
-              </p>
-            </div>
-            <div id="endereco" class="col">
-              <img src="./assets/image/address-icon.png" alt="" />
-              <h2>Nosso endereço</h2>
-              <p>Avenida José de Ananias Aguiar, 5005 - Araxá/MG</p>
-            </div>
-            <div class="politica-privacidade">
-              <a href="">Política de privacidade e termos de uso </a>
-              <p class="copyright">
-                © Copyright
-
-                <script>
-                  //<![CDATA[
-                  document.write(new Date().getFullYear());
-
-                  //]]>
-                </script>
-                Empréstimo fácil Financeira. Todos os direitos reservados. Fácil
-                CFI S.A., pessoa jurídica de direito privado estabelecida na Av.
-                José Ananias de Aguiar, nº 5005, Bairro Conjunto Habitacional,
-                Boa Vista Araxá /MG, CEP 38184-200, inscrita no CNPJ/MF sob o nº
-                05.351.887/0001-88. Prazo de pagamento: de 03 a 24 meses. As
-                taxas mensais podem variar de 5,65% a.m. até 11,80% a.m. CET
-                anual de 232,83% a.a. até 312,50% a.a. Exemplo: um empréstimo de
-                R$ 12.000,00 em 24 meses terá parcelas de R$ 965,05, um valor
-                total de R$ 23.161,20, juros de 5,65% a.m. (93,39% a.a.) e CET
-                de 6,02% a.m (103,72% a.a.). As taxas, prazos de pagamentos e os
-                valores exemplificativos poderão variar de acordo com os
-                critérios de aprovação de crédito da Empréstimo Fácil
-                Financeira.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./js/main.js"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     -->
-  </body>
+</body>
+
 </html>

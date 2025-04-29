@@ -1,35 +1,63 @@
+:root {
+  --primary-font: 'Nunito' sans serif;
+  --ligth-blue: #8dbdff;
+  --background-color: #063d91;
+  --ligth-gray: #f2f2f2;
+  --dark-gray: #444444;
+  --ligth-gray: #f2f2f2;
+  --strong-blue: #0086ff;
+  --elderly-section: #012f6d;
+  --yellow-alert: #f6ac00;
+}
+
+html {
+  font-family: var(--primary-font);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .btn-group-sm {
-  margin-top: -3.5%;
-  padding: 2%;
+  position: relative;
 }
 
 .btn {
   text-align: center;
   float: none;
 }
+
 .btn-primary {
   text-align: center;
   font-size: 15px;
   direction: rtl;
-  font-family: "ubuntu mono";
+  font-family: var(--primary-font);
   margin-top: 2.5%;
   margin-right: 0%;
   margin-left: 70%;
   border-radius: 30px;
+  background-color: var(--background-color) !important;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--ligth-blue) !important;
+  color: var(--elderly-section) !important;
 }
 
 #check-blue {
   width: 100%;
-  font-family: "ubuntu";
+  font-family: var(--primary-font);
   margin-top: -4%;
   padding: 30px 0 0 10px;
+
   h1 {
     font-size: 35px;
     text-align: left;
     color: white;
   }
+
   ul {
-    font-family: "ubuntu+mono";
+    font-family: var(--primary-font);
     direction: rtl;
     color: white;
     font-size: 18px;
@@ -38,6 +66,7 @@
     margin-top: 5%;
     list-style-type: none;
   }
+
   li {
     margin-top: 2.5%;
   }
@@ -64,34 +93,39 @@
     display: none;
   }
 }
+
 .box {
   margin-top: 3.5%;
   width: 100vw;
   height: auto;
   background-image: url("./assets/image/background-img.png");
 }
+
 #box-idoso {
-  background-color: #063d91;
+  background-color: var(--background-color);
   width: 100vw;
   height: 2.3vw;
 }
+
 .card {
   margin-top: 5%;
   display: flex;
   margin-left: 18%;
   margin-right: 20%;
-  color: #444444;
+  color: var(--dark-gray);
   justify-content: center;
   align-items: center;
   width: 65%;
+
   p {
     font-size: 18px;
-    font-family: "ubuntu+mono";
+    font-family: var(--primary-font);
   }
+
   span {
     font-size: 18px;
-    font-family: "ubuntu";
-    color: #063d91;
+    font-family: var(--primary-font);
+    color: var(--background-color);
   }
 }
 
@@ -99,26 +133,29 @@
   width: fit-content;
   border-radius: 5px;
 }
+
 html {
   overflow-x: hidden;
 }
 
 #emprestimo {
   margin-top: 10%;
-  background-color: #f2f2f2;
+  background-color: var(--ligth-gray);
   position: relative;
   box-sizing: border-box;
-  font-family: "Ubuntu", sans-serif !important;
+  font-family: var(--primary-font) !important;
   display: flex;
   flex-direction: row;
+
   h2 {
     margin-top: 10%;
-    font-family: "ubuntu";
+    font-family: var(--primary-font);
     text-align: left;
     font-size: 32px;
-    color: #012f6d;
+    color: var(--background-color);
+
     strong {
-      color: #0086ff;
+      color: var(--strong-blue);
     }
   }
 }
@@ -150,7 +187,7 @@ html {
 }
 
 #lista-reclame-aqui {
-  font-family: "ubuntu+mono";
+  font-family: var(--primary-font);
   direction: rtl;
   font-size: 18px;
   margin-top: -5%;
@@ -177,10 +214,12 @@ html {
   text-align: left;
   margin-top: 10%;
   margin-left: 10%;
+
   strong {
-    color: #0086ff;
+    color: var(--strong-blue);
   }
 }
+
 @media screen and (min-width: 310px) and (max-width: 450px) {
   #tres-passos .row .col-sm-4 img {
     width: 300px;
@@ -208,13 +247,14 @@ html {
     max-width: 100%;
   }
 }
+
 #secao-idosa {
   width: 100%;
   margin-top: 10%;
-  background-color: #f2f2f2;
+  background-color: var(--ligth-gray);
   position: relative;
   box-sizing: border-box;
-  font-family: "Ubuntu", sans-serif !important;
+  font-family: var(--primary-font) !important;
   display: flex;
   flex-direction: row;
 }
@@ -235,10 +275,11 @@ html {
 #secao-idosa #coluna-idosa .row h2 {
   margin-top: 20%;
   margin-left: -70%;
-  font-family: "ubuntu";
+  font-family: var(--primary-font);
   text-align: left;
   font-size: 2rem;
-  color: #012f6d;
+  color: var(--elderly-section);
+
   strong {
     color: #0086ff;
   }
@@ -249,19 +290,21 @@ html {
 }
 
 #secao-idosa #coluna-idosa .row ul {
-  font-family: "ubuntu+mono";
+  font-family: var(--primary-font);
   color: #444444;
   font-size: 18px;
   margin-top: 5%;
   list-style-type: none;
   margin-bottom: 10%;
+
   li {
     margin-left: -85%;
     margin-top: 2.5%;
   }
+
   p {
     margin-top: 10%;
-    font-family: "ubuntu+mono";
+    font-family: var(--primary-font);
   }
 }
 
@@ -300,6 +343,7 @@ html {
     font-size: 1.9rem;
   }
 }
+
 @media only screen and (min-width: 310px) and (max-width: 450px) {
   #secao-idosa #coluna-idosa .row ul {
     margin-bottom: 15%;
@@ -308,7 +352,7 @@ html {
 }
 
 @media (min-width: 310px) and (max-width: 450px) {
-  .carousel-inner .carousel-item > div {
+  .carousel-inner .carousel-item>div {
     display: flex;
     flex-direction: column;
   }
@@ -320,7 +364,7 @@ html {
 }
 
 @media (min-width: 310px) and (max-width: 450px) {
-  #slides .carousel-inner .carousel-item > div {
+  #slides .carousel-inner .carousel-item>div {
     display: flex;
     flex-direction: column;
   }
@@ -341,12 +385,14 @@ html {
   font-family: "ubuntu";
   margin-top: 10%;
   text-align: center;
+
   h2 {
-    color: #012f6d;
+    color: var(--elderly-section);
     font-size: 35px;
   }
+
   strong {
-    color: #0086ff;
+    color: var(--strong-blue);
     font-size: 35px;
   }
 }
@@ -365,6 +411,7 @@ footer {
   color: #f6ac00 !important;
   font-size: 1.75rem !important;
 }
+
 .footer-content-wrapper #contato-container #whatsapp-icon {
   margin-left: 10%;
 }
@@ -379,7 +426,7 @@ footer {
 }
 
 .footer-content-wrapper #contato-container .link-whats {
-  font-family: "ubuntu+mono";
+  font-family: var(--primary-font);
   color: #ffff;
   font-size: 12px;
   margin-left: 9%;
@@ -395,7 +442,7 @@ footer {
 }
 
 #atendimento-ouvidoria p {
-  font-family: "ubuntu+mono";
+  font-family: var(--primary-font);
   color: #ffff;
   font-size: 1.1rem;
   margin-right: 9%;
@@ -412,20 +459,23 @@ footer {
 }
 
 #canal-denuncia p {
-  font-family: "ubuntu+mono";
+  font-family: var(--primary-font);
   margin-left: 4%;
   color: #ffff;
   font-size: 1.1rem;
 }
+
 #canal-denuncia img {
   margin-left: 4%;
 }
+
 @media only screen and (min-width: 310px) and (max-width: 450px) {
   #canal-denuncia {
     padding: 0px 80px 0px 50px;
     margin-left: -7%;
   }
 }
+
 #endereco h2 {
   font-family: "ubuntu";
   margin-left: 4%;
@@ -437,9 +487,9 @@ footer {
 }
 
 #endereco p {
-  font-family: "ubuntu+mono";
+  font-family: var(--primary-font);
   margin-left: 5%;
-  color: #ffff;
+  color: white;
   font-size: 1.1rem;
 }
 
@@ -449,12 +499,13 @@ footer {
 }
 
 .politica-privacidade a {
-  font-family: "ubuntu";
+  font-family: var(--primary-font);
   margin-left: 4%;
-  color: #f6ac00 !important;
+  color: var(--yellow-alert) !important;
   line-height: 2.42rem;
   font-size: 1.25rem;
 }
+
 @media only screen and (min-width: 310px) and (max-width: 450px) {
   .politica-privacidade a {
     font-size: 1.25rem;
@@ -463,10 +514,10 @@ footer {
 }
 
 .politica-privacidade .copyright {
-  font-family: "ubuntu+mono";
+  font-family: var(--primary-font);
   padding-top: 3rem;
   margin-left: 2%;
-  color: #ffff;
+  color: white;
   font-size: 0.98rem;
   width: 100%;
   display: flex;
@@ -496,33 +547,33 @@ footer {
 .section-subtitle {
   margin-top: 10%;
   font-size: 1rem;
-  color: #0086ff;
-  font-family: "ubuntu";
+  color: var(--strong-blue);
+  font-family: var(--primary-font);
 }
 
 #logo-emprestimo-facil h1 {
   margin-top: 5%;
   margin-bottom: 5%;
   font-size: 2.6rem;
-  color: #063d91;
+  color: var(--elderly-section);
 }
 
 .input-simulation {
-  font-family: "ubuntu";
+  font-family: var(--primary-font);
   font-size: 28px;
   border: none;
   outline: none;
   background-color: transparent;
   border-bottom: 1px solid grey;
-  color: #0086ff;
+  color: var(--strong-blue);
   width: 280px;
 }
 
 .mascaraValor {
-  font-family: "ubuntu";
+  font-family: var(--primary-font);
   background-image: url("./assets/image/edit-solid.svg");
   background-size: 20px;
-  color: #0086ff;
+  color: var(--strong-blue);
   background-repeat: no-repeat;
   background-position: top right;
   padding-right: 20px;
@@ -530,15 +581,16 @@ footer {
 
 .input-subtitle {
   font-size: 1rem;
-  color: #0086ff;
-  font-family: "ubuntu";
+  color: var(--strong-blue);
+  font-family: var(--primary-font);
 }
 
 #subtitle-input {
   margin-top: 10%;
   font-size: 1rem;
-  color: #063d91;
-  font-family: "ubuntu";
+  color: var(--elderly-section);
+  font-family: var(--primary-font);
+  font-weight: 900;
 }
 
 #selecione-prazo {
@@ -546,24 +598,26 @@ footer {
   display: block;
   font-size: 1rem;
   font-weight: 900;
-  color: #063d91;
-  font-family: "ubuntu";
+  color: var(--elderly-section);
+  font-family: var(--primary-font);
 }
 
 .rounded-select {
   margin-top: 4%;
   border-radius: 30px;
   padding: 5px;
+  padding-left: 100px;
   appearance: none;
   -webkit-appearance: none;
   background-repeat: no-repeat;
   background-position: right 50% center;
   background-size: 15px;
   border: 1px solid grey;
-  color: #063d91;
-  font-family: "ubuntu";
+  color: var(--elderly-section);
+  font-family: var(--primary-font);
   background-color: transparent;
   width: 280px;
+  cursor: pointer;
 }
 
 .rounded-select:focus {
@@ -581,12 +635,12 @@ footer {
 }
 
 .btn-outline-primary {
-  border-color: #0086ff;
+  border-color: var(--strong-blue);
   background-color: transparent;
 }
 
 #botao-continuar {
-  background-color: "#f6ac00";
+  background-color: #f6ac00;
 }
 
 @media (min-width: 310px) and (max-width: 480px) {
@@ -603,8 +657,172 @@ footer {
 
 .input-currency {
   vertical-align: middle;
-  color: #0086ff;
-  font-family: "ubuntu";
+  color: var(--strong-blue);
+  font-family: var(--primary-font);
   font-size: 28px;
   margin-right: 5px;
+}
+
+.login-or-register {
+  border: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  left: 230px;
+  top: -32px;
+}
+
+.ico-login {
+  width: 32px;
+  cursor: pointer;
+  margin-right: 5px;
+  position: relative;
+  top: -13px;
+  left: 2px;
+}
+
+.login-or-register-text {
+  cursor: pointer;
+  font-family: var(--primary-font);
+  color: var(--elderly-section);
+  position: relative;
+  top: -10px;
+  left: 0px;
+}
+
+.login-or-register-text:hover {
+  color: var(--strong-blue);
+}
+
+
+@media (max-width: 768px) {
+  .login-or-register {
+    left: 0%;
+  }
+}
+
+.modal {
+  transition: none !important;
+  /* Remove todas as transições do modal */
+}
+
+.modal.fade {
+  opacity: 1 !important;
+  /* Garante que o modal comece totalmente visível */
+}
+
+.modal.show {
+  opacity: 1 !important;
+  /* Garante que o modal permaneça totalmente visível */
+}
+
+.modal-backdrop.fade {
+  opacity: 0.5 !important;
+  /* Mantém o backdrop com alguma opacidade, se desejar */
+}
+
+.modal-backdrop.show {
+  opacity: 0.5 !important;
+  /* Mantém o backdrop com alguma opacidade, se desejar */
+}
+
+.close {
+  border: none;
+  background-color: transparent;
+  font-size: 25px;
+  color: var(--background-color)
+}
+
+#modalCadastroLabel {
+  color: var(--background-color) !important;
+}
+
+div.modal-body {
+  color: var(--background-color) !important;
+}
+
+.form-control:focus {
+  color: var(--ligth-blue) !important;
+}
+
+.form-control {
+  outline: none !important;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+.btn-register-close {
+  width: 150px;
+  height: 40px;
+  display: flex;
+  position: relative;
+  left: -80px;
+  padding-top: 8px;
+  padding-left: 50px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--elderly-section);
+  color: var(--ligth-blue);
+  font-weight: 700;
+}
+
+.btn-register-close:hover {
+
+  background-color: var(--ligth-blue);
+  color: var(--elderly-section);
+}
+
+.btn-register {
+  width: 150px;
+  height: 40px;
+  display: flex;
+  position: relative;
+  left: 80px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--elderly-section);
+  color: var(--ligth-blue);
+  font-weight: 700;
+  padding-top: 8px;
+  padding-left: 50px;
+}
+
+.btn-register:hover {
+
+  background-color: var(--ligth-blue);
+  color: var(--elderly-section);
+}
+
+@media (max-width: 768px) {
+  .btn-register {
+    left: 25px;
+  }
+
+  .btn-register-close {
+    left: -25px;
+  }
+
+  #botao {
+    font-size: small;
+  }
+}
+
+#botao:hover {
+  background-color: var(--ligth-blue);
+  color: var(--background-color);
+}
+
+@media (min-width: 1200px) {
+  #botao {
+    width: 230px;
+    height: 45px;
+    font-size: 20px;
+    font-weight: 700;
+  }
 }
